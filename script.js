@@ -7,12 +7,12 @@ console.log(pencilprrice**eraser);
 let n=5;
 let str="5";//compare value not type
 console.log(n===str);//compare value and type
-let stri='a=61&aA=41'//compare unique code
+let stri='a=61&aA=41';//compare unique code
 let colour="red";
-if(colour==red){
+if(colour=="red"){
     console.log("stop");
 }
-if(colour==yellow){
+if(colour=="yellow"){
     console.log("stop");}
     let color="red";
     switch(color){
@@ -25,3 +25,9 @@ if(colour==yellow){
     console.warn("nothing");
    let firstname= prompt("enter your name");
    console.log(firstname);
+   let strp="  hello ";
+  console.log(strp.trim) ;
+  let pass=prompt("password");
+  //strings are immutable
+  let ms=" gh ";
+  console.log(ms.trim);
