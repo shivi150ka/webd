@@ -106,3 +106,12 @@ let id=setInterval(()=>
 setTimeout(()=>{
   clearInterval(id);
 },10000);
+let arrave=(arr)=>{
+  let avg=0;
+  for(let i=0;i<=arr.length;i++){
+    avg+=arr[i];
+  }
+  return avg/arr.length;
+}
+let ar=[1,5,6,9];
+console.log(arrave(ar));
