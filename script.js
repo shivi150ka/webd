@@ -61,3 +61,13 @@ console.log(max);
   let arr=[2,5,8,9];
   let num=20;
   let max=20;
+const student={
+  name:"shradha",
+  eng:78,
+  math:90,
+  getavg(){
+    let avg=(this.eng+this.math/3)
+  }
+
+
+}
