@@ -98,3 +98,11 @@ setTimeout(()=>{
 //using for api
 //set interval (har  fixed sec per repeat hoga) isko stop krne using clear using id
 //arrrow k liye parent scope hai
+let id=setInterval(()=>
+
+{
+  console.log("hello")
+},2000);
+setTimeout(()=>{
+  clearInterval(id);
+},10000);
