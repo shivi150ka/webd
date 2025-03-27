@@ -79,3 +79,22 @@ catch{
   console.log("error");
 }
 console.log("hello");
+//miscellaneous
+//arrow function
+const variab =(a,b)=>{
+  console.log(a+b);
+}
+let a=5;
+let b=4;
+//implict return only for return value only
+const va=(a,b)=>(
+  a*b
+);
+//set timeout (data kitne der baad functio)
+console.log("hello");
+setTimeout(()=>{
+  console.log("hello")
+},4000);
+//using for api
+//set interval (har  fixed sec per repeat hoga) isko stop krne using clear using id
+//arrrow k liye parent scope hai
