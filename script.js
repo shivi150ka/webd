@@ -115,3 +115,20 @@ let arrave=(arr)=>{
 }
 let ar=[1,5,6,9];
 console.log(arrave(ar));
+let arv=[2,5,9,6];
+arv.forEach(function(el)
+{
+  console.log(el);
+});
+arv.forEach((el)=>
+{
+  console.log(el);
+});
+let num9=[9,6,3,2];
+let double=num9.map((elm)=>{
+  return 2*elm;
+});
+let ans=num9.filter((elp)=>{
+  return el<5;
+});
+let p=num9.every((el)=>)
