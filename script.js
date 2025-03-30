@@ -134,3 +134,6 @@ let ans=num9.filter((elp)=>{
 let p=num9.every((el)=>)
 //... destructuring
 //object destructing me {username:nam}=student;
+console.log(...a);
+let arrm=[5,4,6,4];
+let nea=[...arrm,...a];
