@@ -133,7 +133,14 @@ let ans=num9.filter((elp)=>{
 });
 let p=num9.every((el)=>)
 //... destructuring
-//object destructing me {username:nam}=student;
+//object destructing and spread me {username:nam}=student;
 console.log(...a);
 let arrm=[5,4,6,4];
 let nea=[...arrm,...a];
+//object me index use hota hai
+//default value
+function add(a,b=8){
+  return a+b;
+}
+let anse=num9.every((el)=>el%10==0);
+console.log(ans);
