@@ -131,7 +131,7 @@ let double=num9.map((elm)=>{
 let ans=num9.filter((elp)=>{
   return el<5;
 });
-let p=num9.every((el)=>)
+
 //... destructuring
 //object destructing and spread me {username:nam}=student;
 console.log(...a);
