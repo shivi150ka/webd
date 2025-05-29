@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PYQs Dropdown with Auto-Close</title>
+  <style>
+    /* [Same CSS as before, shortened here for brevity] */
+    .pyqs-dropdown {
+      position: relative;
+      display: inline-block;
+      font-family: sans-serif;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .btn3 {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .pyqs-dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      min-width: 400px;
+      display: flex;
+      gap: 20px;
+      z-index: 999;
+    }
+
+    .year-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .year-label {
+      background: #2ecc71;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    .year-content {
+      display: none;
+      flex-direction: column;
+    }
+
+    .year-content a {
+      background-color: #f39c12;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+
+    .year-content a:hover {
+      background-color: #e67e22;
+    }
+
+    .show {
+      display: flex !important;
+    }
+  </style>
+</head>
+<body>
+
+<div class="pyqs-dropdown">
+  <button class="btn3" id="toggleButton">PYQs</button>
+
+  <div class="pyqs-dropdown-content" id="dropdownMenu">
+    <div class="year-column">
+      <label for="year-2023" class="year-label">2023</label>
+      <label for="year-2024" class="year-label">2024</label>
+    </div>
+
+    <div class="contents">
+      <input type="radio" name="year" id="year-2023">
+      <div class="year-content year-2023">
+        <a href="./assets/pyq/MTSE_Class_5_2023_English.pdf" download>Class 5</a>
+        <a href="./assets/pyq/MTSE_Class_6_2023_English.pdf" download>Class 6</a>
+      </div>
+
+      <input type="radio" name="year" id="year-2024">
+      <div class="year-content year-2024">
+        <a href="./assets/pyq/MTSE_Class_5_2024_English.pdf" download>Class 5</a>
+        <a href="./assets/pyq/MTSE_Class_6_2024_English.pdf" download>Class 6</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggleButton');
+  const dropdown = document.getElementById('dropdownMenu');
+  const yearRadios = document.querySelectorAll('input[type="radio"]');
+  const yearContents = document.querySelectorAll('.year-content');
+
+  let hideTimeout;
+
+  toggleBtn.addEventListener('click', () => {
+    dropdown.classList.toggle('show');
+    clearTimeout(hideTimeout);
+    startAutoHide();
+  });
+
+  document.querySelectorAll('.year-label').forEach((label, index) => {
+    label.addEventListener('click', () => {
+      yearContents.forEach((c, i) => {
+        c.style.display = i === index ? 'flex' : 'none';
+      });
+      clearTimeout(hideTimeout);
+      startAutoHide();
+    });
+  });
+
+  function startAutoHide() {
+    hideTimeout = setTimeout(() => {
+      dropdown.classList.remove('show');
+      yearContents.forEach(c => c.style.display = 'none');
+    }, 3000); // 5 seconds of inactivity
+  }
+</script>
+
+</body>
+</html>
