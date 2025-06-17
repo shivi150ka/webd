@@ -1,17 +1,20 @@
-window.onload = function () {
-    const stage1 = document.getElementById('stage1');
-    const stage2 = document.getElementById('stage2');
-    const popup = document.getElementById('popup');
-  
-    // Switch to Silver Jubilee text after 5 seconds
-    setTimeout(() => {
-      stage1.classList.add('hidden');
-      stage2.classList.remove('hidden');
-    }, 5000);
-  
-    // Hide popup after 10 seconds
-    setTimeout(() => {
-      popup.style.display = 'none';
-    }, 10000);
-  };
-  
+
+  // function printtable(num){
+  //   console.log(`table of ${num}`);
+  //   for(let i=1;i<=10;i++){
+  //     console.log(num*i);
+  //   }
+  // }
+  // printtable(9);
+
+  let str=["hyy","hello","anjali","bye","tata"];
+
+  function concat(string){
+    let newstr=" ";
+    for(let i=0;i<string.length;i++){
+newstr+=string[i];
+    }
+    return newstr;
+  }
+concat(str);
+//console.log(newstr);
